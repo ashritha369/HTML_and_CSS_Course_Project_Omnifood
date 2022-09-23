@@ -60,7 +60,7 @@ html {
   /* 0.625x100= 62.5% */
 }
 body {
-  font-family: sans-serif;
+  font-family: "Rubik" sans-serif;
   line-height: 1;
   font-weight: 400;
   color: #555;
@@ -114,7 +114,7 @@ body {
   /* removing the underline of the anchor link */
   text-decoration: none;
   font-size: 2rem;
-
+  font-weight: 600;
   padding: 1.6rem 3.2rem;
   border-radius: 9px;
 }
@@ -156,4 +156,35 @@ body {
 /* reusable class-(helper class) */
 .margin-right-sm {
   margin-right: 1.6rem !important;
+}
+/* delivered meals acts like a flex container */
+.delivered-meals {
+  /* to display side by side */
+  display: flex;
+  margin-top: 8rem;
+  /* below aligns to everything to center vertically */
+  align-items: center;
+  /* gap between items*/
+  gap: 1.6rem;
+}
+.delivered-imgs img {
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+  /* to overlap images ,i.e to pull each images to the left side*/
+  margin-right: -1.6rem;
+  border: 3px solid #fdf2e9;
+}
+/* to select last image element we have a pseudo class :last-child like below*/
+.delivered-imgs img:last-child {
+  margin: 0;
+}
+.delivered-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.delivered-text span {
+  /* used https://coolors.co/contrast-checker/cf711f-fdf2e9 */
+  color: #cf711f;
+  font-weight: 700;
 }
