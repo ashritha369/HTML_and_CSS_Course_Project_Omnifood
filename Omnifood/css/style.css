@@ -74,6 +74,29 @@ body {
 /*******************************************/
 /* GENERAL RE-USABLE COMPONENTS */
 /*******************************************/
+/* reusable container */
+.container {
+  /* 1140px */
+  max-width: 120rem;
+  /* here auto gives same margin to the left and right , and it determines automatically */
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+/* reusable grid */
+.grid {
+  display: grid;
+  gap: 9.6rem;
+  /* (2, 1fr) is equal to 1fr 1fr */
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .heading-primary {
   font-size: 5.2rem;
   line-height: 1.05;
@@ -132,6 +155,7 @@ body {
 .margin-right-sm {
   margin-right: 1.6rem !important;
 }
+
 /*****************************/
 /* HEADER SECTION */
 /*****************************/
@@ -253,4 +277,11 @@ body {
   /* used https://coolors.co/contrast-checker/cf711f-fdf2e9 */
   color: #cf711f;
   font-weight: 700;
+}
+/*****************************/
+/* HOW IT WORKS SECTION */
+/*****************************/
+.section-how {
+  padding: 9.6rem 0;
+  background-color: orangered;
 }
