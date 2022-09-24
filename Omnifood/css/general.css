@@ -70,7 +70,7 @@ html {
   /* 0.625x100= 62.5% */
 }
 body {
-  font-family: "Rubik" sans-serif;
+  font-family: "Rubik", sans-serif;
   line-height: 1;
   font-weight: 400;
   color: #555;
