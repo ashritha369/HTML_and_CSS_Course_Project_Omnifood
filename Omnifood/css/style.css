@@ -121,6 +121,35 @@
   font-weight: 700;
 }
 /*****************************/
+/* FEATURED IN SECTION*/
+/*****************************/
+.section-featured {
+  padding: 4.8rem 0 3.2rem 0;
+}
+.heading-featured-in {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 2.4rem;
+  color: #888;
+}
+.logos {
+  /* display:flex will make logos side by side */
+  display: flex;
+  /* to give space around the logo images */
+  justify-content: space-around;
+}
+
+.logos img {
+  height: 3.2rem;
+  /* making images to different color or brightness */
+  filter: brightness(0);
+  /* can also change the visibility of images */
+  opacity: 50%;
+}
+/*****************************/
 /* HOW IT WORKS SECTION */
 /*****************************/
 .section-how {
