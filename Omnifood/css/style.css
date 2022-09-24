@@ -1,185 +1,3 @@
-/* 
----01 TYPOGRAPGHY SYSTEM
-
-      --FONT SIZE SYSTEM (px)
-      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
-
-      --FONT WEIGHTS: 
-        Default: 400
-        Medium:  500
-        Semi-bold: 600
-        Bold: 700
-
-      --LINE HEIGHTS:
-        Default line weight : 1
-        small: 1.05
-        medium:1.2
-        paragraph default: 1.6
-
-      --SPACING SYSTEM (px)
-      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
-
----02 COLORS
-      --Primary: #e67e22;
-            <generated tints and shades using tints and shades generator online tool>
-            <a tint is a mixture of a color with white, which increases lightness, while a shade is a mixture with black, which increases darkness.>
-      --Tints(lighter shades):#fdf2e9
-      --Shades(Darker shades):#cf711f
-      --Accents:
-      --Greys: 
-         #555
-         #333
-
-
----03 IMAGES
-
-    -- Got images from https://unsplash.com/ 
-        All you have to do is, for example, to search for food.    And then whatever you need,    you can just click here on this download arrow,    and this will then immediately download the image    and you can then use it for free,    without any restrictions, wherever you want.
-    -- Got customer images from https://www.uifaces.co/browse-avatars/ 
-        you can then use it for free.
-
-
----04 SHADOWS
-
----05 BORDER-RADIUS
-     Default: 9px;
----07 WHITESPACE
----08 LETTER SPACING
-    -0.5px
-     0.75px
-
-*/
-
-/* with the global reset. So selecting everything and then setting padding and margin    to 0 in order to override the default styles    of all browsers,    and then also activating the border-box setting    in our box model.    Okay.    So that is our global reset, */
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-/* The line-height property specifies the height of a line. */
-/* Note: Negative values are not allowed. */
-
-html {
-  font-size: 62.5%;
-  /* means 10px */
-  /* default browser font size is 16px which means ,  lets say that we need to set to 10px: */
-  /* so 10px/16px=0.625 */
-  /* Converting to percentage */
-  /* 0.625x100= 62.5% */
-}
-body {
-  font-family: "Rubik" sans-serif;
-  line-height: 1;
-  font-weight: 400;
-  color: #555;
-}
-
-/*******************************************/
-/* GENERAL RE-USABLE COMPONENTS */
-/*******************************************/
-/* reusable container */
-.container {
-  /* 1140px */
-  max-width: 120rem;
-  /* here auto gives same margin to the left and right , and it determines automatically */
-  margin: 0 auto;
-  padding: 0 3.2rem;
-}
-/* reusable grid */
-.grid {
-  display: grid;
-  gap: 9.6rem;
-  /* (2, 1fr) is equal to 1fr 1fr */
-}
-
-.grid--2-cols {
-  grid-template-columns: repeat(2, 1fr);
-}
-.grid--3-cols {
-  grid-template-columns: repeat(3, 1fr);
-}
-.grid--4-cols {
-  grid-template-columns: repeat(4, 1fr);
-}
-/* common css for headings */
-.heading-primary,
-.heading-secondary {
-  font-weight: 700;
-  color: #45260a;
-  /* The letter-spacing property increases or decreases the space between characters in a text. */
-  letter-spacing: -0.5px;
-}
-.heading-primary {
-  font-size: 5.2rem;
-  line-height: 1.05;
-  margin-bottom: 3.2rem;
-}
-.heading-secondary {
-  font-size: 4.4rem;
-  line-height: 1.2;
-  margin-bottom: 9.6rem;
-}
-.subheading {
-  display: block;
-  font-size: 1.6rem;
-  font-weight: 500;
-  color: #cf711f;
-  text-transform: uppercase;
-  margin-bottom: 1.6rem;
-  letter-spacing: 0.75px;
-}
-.heading-tertiary {
-}
-.btn:link,
-.btn:visited {
-  /*Inline elements are those which only occupy the space bounded by the tags defining the element, instead of breaking the flow of the content. Note: An inline element does not start on a new line and only takes up as much width as necessary  */
-
-  /* “display: inline-block” Property: This property is used to display an element as an inline-level block container. The element itself is formatted as an inline element, but it can apply height and width values. It is placed as an inline element (on the same line as adjacent content). */
-
-  display: inline-block;
-  background-color: #e67e22;
-  /* removing the underline of the anchor link */
-  text-decoration: none;
-  font-size: 2rem;
-  font-weight: 600;
-  padding: 1.6rem 3.2rem;
-  border-radius: 9px;
-}
-/* btn-ful styling */
-.btn--full:link,
-.btn--full:visited {
-  background-color: #e67e22;
-  color: #fff;
-  /* put transition on original state */
-  transition: background-color 0.3s;
-}
-/* on hover of btn ful*/
-
-.btn--full:hover,
-.btn--full:active {
-  background-color: #cf711f;
-}
-
-/* btn-outline styling */
-.btn--outline:link,
-.btn--outline:visited {
-  background-color: #fff;
-  color: #555;
-}
-/* on hover of btn outline*/
-.btn--outline:hover,
-.btn--outline:active {
-  background-color: #fdf2e9;
-  /* this type of border adds border outside if the button, which shakes the layout a bit */
-  /* border: 2px solid white; */
-  /* A trick to avoive above is to use box-shadow: */
-  box-shadow: inset 0 0 0 3px #fff;
-}
-/* reusable class-(helper class) */
-.margin-right-sm {
-  margin-right: 1.6rem !important;
-}
-
 /*****************************/
 /* HEADER SECTION */
 /*****************************/
@@ -311,5 +129,61 @@ body {
 }
 
 .step-img {
-  width: 50%;
+  width: 35%;
+}
+.step-number {
+  font-size: 8.6rem;
+  font-weight: 600;
+  color: #ddd;
+  margin-bottom: 1.2rem;
+}
+.step-description {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+/* centering image both vertically and horizontally */
+.step-img-box {
+  /* below is parent position element */
+  position: relative;
+  /* in-order to align them in both ways we should use flex so by default display :flex will align items to strech vertically*/
+  display: flex;
+  /* Vertically it will make it center */
+  align-items: center;
+  /* horizontally it will make it center */
+  justify-content: center;
+}
+
+/* to make step img box div as circle using pseudo elements */
+
+/* putting common things together */
+.step-img-box::before,
+.step-img-box::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  /* below is child position element of the parent's position  */
+  position: absolute;
+  /* we want to center the element */
+  top: 50%;
+  left: 50%;
+  /* so if we use translate it will transfrom it mentioned percent of height and width accordingly */
+  transform: translate(-50%, -50%);
+}
+.step-img-box::before {
+  width: 60%;
+  /* below height specification wont reflect so we add padding bottom as below */
+  /* height: 60%; */
+  /* below padding means, it is 60% of parent's width, this will create a intrinsic height of zero with padding 60%,so it will appear as a square */
+  padding-bottom: 60%;
+  background-color: #fdf2e9;
+  /* Elements with higher value of z-index will appear first i.e on top*/
+  z-index: -2;
+}
+/* to create one more circle using after, because we cannot use before again */
+
+.step-img-box::after {
+  width: 45%;
+  padding-bottom: 45%;
+  background-color: #fae5d3;
+  z-index: -1;
 }
