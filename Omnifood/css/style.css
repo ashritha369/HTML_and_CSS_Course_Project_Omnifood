@@ -13,6 +13,7 @@
       --LINE HEIGHTS:
         Default line weight : 1
         small: 1.05
+        medium:1.2
         paragraph default: 1.6
 
       --SPACING SYSTEM (px)
@@ -43,7 +44,9 @@
 ---05 BORDER-RADIUS
      Default: 9px;
 ---07 WHITESPACE
-
+---08 LETTER SPACING
+    -0.5px
+     0.75px
 
 */
 
@@ -92,19 +95,40 @@ body {
 .grid--2-cols {
   grid-template-columns: repeat(2, 1fr);
 }
-
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
 .grid--4-cols {
   grid-template-columns: repeat(4, 1fr);
 }
-
+/* common css for headings */
+.heading-primary,
+.heading-secondary {
+  font-weight: 700;
+  color: #45260a;
+  /* The letter-spacing property increases or decreases the space between characters in a text. */
+  letter-spacing: -0.5px;
+}
 .heading-primary {
   font-size: 5.2rem;
   line-height: 1.05;
-  font-weight: 700;
-  color: #333;
   margin-bottom: 3.2rem;
-  /* The letter-spacing property increases or decreases the space between characters in a text. */
-  letter-spacing: -0.5px;
+}
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+.subheading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #cf711f;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
+}
+.heading-tertiary {
 }
 .btn:link,
 .btn:visited {
@@ -283,5 +307,9 @@ body {
 /*****************************/
 .section-how {
   padding: 9.6rem 0;
-  background-color: orangered;
+  /* background-color: orangered; */
+}
+
+.step-img {
+  width: 50%;
 }
