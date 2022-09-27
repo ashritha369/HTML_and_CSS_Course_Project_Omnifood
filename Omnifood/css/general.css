@@ -164,7 +164,8 @@ body {
   background-color: #e67e22;
   color: #fff;
   /* put transition on original state */
-  transition: background-color 0.3s;
+  /* transition: background-color 0.3s; */
+  transition: all 0.3s;
 }
 /* on hover of btn ful*/
 
