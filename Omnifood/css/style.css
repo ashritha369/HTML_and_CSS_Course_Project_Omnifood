@@ -227,6 +227,19 @@
   border-radius: 11px;
   /* whatever overflows this container has, that should be hiddden */
   overflow: hidden;
+  /* to make animation along with hover, we use transition property on the original state that is, .meal */
+  transition: all 0.4s;
+}
+/* creating hover effect to meal cards */
+.meal:hover {
+  /* transform:translate(horizontal vertical) */
+  /* transform:translateY(+vertical)=will hover down */
+  /* transform:translateY(-vertical)=will hover up */
+  transform: translateY(-1.2rem);
+  /* to make animation along with hover,  we use transition property on the original state that is, .meal */
+  /* ----------------- */
+  /* changing box shadow on hover */
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
 }
 .meal-content {
   padding: 3.2rem 4.8rem 4.8rem 4.8rem;
@@ -288,7 +301,32 @@
   color: #e67e22;
 }
 
+.all-recipes {
+  text-align: center;
+  font-size: 1.8rem;
+}
 /* redefining the strong tag's property of css */
 strong {
   font-weight: 500;
+}
+/* diet list */
+.list-item {
+  font-size: 1.8rem;
+  /* to align list names with icon vertically centerwise */
+  display: flex;
+  align-items: center;
+  /* gap in between */
+  gap: 1.6rem;
+}
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #e67e22;
 }
