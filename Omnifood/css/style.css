@@ -309,27 +309,7 @@
 strong {
   font-weight: 500;
 }
-/* diet list */
-.list-item {
-  font-size: 1.8rem;
-  /* to align list names with icon vertically centerwise */
-  display: flex;
-  align-items: center;
-  /* gap in between */
-  gap: 1.6rem;
-}
-.list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1.8rem;
-}
 
-.list-icon {
-  width: 3rem;
-  height: 3rem;
-  color: #e67e22;
-}
 /*****************************/
 /* TESTIMONIALS SECTION */
 /*****************************/
@@ -387,4 +367,46 @@ strong {
   /* it occupies vertically huge way, so to fix that we give width: 100% */
   width: 100%;
   transition: all 0.4s;
+}
+/*****************************/
+/* PRICING SECTION */
+/*****************************/
+.section-pricing {
+  padding: 9.6rem 0;
+}
+.plan-header {
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+.plan-name {
+  color: #cf711f;
+  font-weight: 600;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75;
+  margin-bottom: 3.2rem;
+}
+
+.plan-price {
+  font-size: 6.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.6rem;
+}
+
+.plan-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #6f6f6f;
+}
+
+.plan-price span {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-right: 0.8rem;
+}
+
+.plan-sign-up {
+  text-align: center;
+  margin-top: 4.8rem;
 }

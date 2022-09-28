@@ -216,3 +216,24 @@ body {
 .margin-bottom-md {
   margin-bottom: 4.8rem !important;
 }
+/* diet list-reusable */
+.list-item {
+  font-size: 1.8rem;
+  /* to align list names with icon vertically centerwise */
+  display: flex;
+  align-items: center;
+  /* gap in between */
+  gap: 1.6rem;
+}
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #e67e22;
+}
