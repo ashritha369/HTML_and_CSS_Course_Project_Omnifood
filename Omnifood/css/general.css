@@ -28,6 +28,7 @@
           #fae5d3
           #eb984e
       --Shades(Darker shades):#cf711f
+      :#45260a
       --Accents:
       --Greys: 
           #6f6f6f (lightest grey allowed on #fdf2e9)
@@ -150,6 +151,7 @@ body {
   letter-spacing: 0.75px;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
   /*Inline elements are those which only occupy the space bounded by the tags defining the element, instead of breaking the flow of the content. Note: An inline element does not start on a new line and only takes up as much width as necessary  */
@@ -157,13 +159,18 @@ body {
   /* “display: inline-block” Property: This property is used to display an element as an inline-level block container. The element itself is formatted as an inline element, but it can apply height and width values. It is placed as an inline element (on the same line as adjacent content). */
 
   display: inline-block;
-  background-color: #e67e22;
+
   /* removing the underline of the anchor link */
   text-decoration: none;
   font-size: 2rem;
   font-weight: 600;
   padding: 1.6rem 3.2rem;
   border-radius: 9px;
+  /* only neccesary for .btn of section call to action */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  /* ---- */
 }
 /* btn-ful styling */
 .btn--full:link,
@@ -193,8 +200,19 @@ body {
   background-color: #fdf2e9;
   /* this type of border adds border outside if the button, which shakes the layout a bit */
   /* border: 2px solid white; */
-  /* A trick to avoive above is to use box-shadow: */
+  /* A trick to avoid above is to use box-shadow: i.e to add a border inside */
   box-shadow: inset 0 0 0 3px #fff;
+}
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  /* to vertically align things we use align property */
+  align-self: end;
+  padding: 1.2rems;
+}
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
 }
 .link:link,
 .link:visited {
@@ -211,6 +229,11 @@ body {
   color: #cf711f;
   border-bottom: 1px solid transparent;
 }
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+}
+
 /* reusable class-(helper class) */
 
 .margin-right-sm {
