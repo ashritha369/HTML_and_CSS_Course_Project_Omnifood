@@ -113,6 +113,9 @@ body {
 .grid--4-cols {
   grid-template-columns: repeat(4, 1fr);
 }
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
 /* to align things center vertically */
 .grid--center-v {
   align-items: center;
