@@ -26,3 +26,40 @@ em=current font size
     grid-template-columns: repeat(2, 1fr);
   }
 }
+/* BELOW 1200px(LANDSCAPE TABLETS) */
+/*****************************/
+
+/* 2st breakpoint found at 1200px , here at this point we found that font-size are bit higher*/
+
+/* converting 1200px to em */
+
+/* 1200px/16px= 75em*/
+
+@media (max-width: 75em) {
+  html {
+    /* we want 9px so (9px divided by 16px-default) multiplied by 100=56.25% */
+    font-size: 56.25%;
+  }
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
+  .grid {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
+  .header {
+    padding: 0 3.2rem;
+  }
+  .hero {
+    gap: 4.8rem;
+  }
+  .main-nav-list {
+    gap: 3.2rem;
+  }
+  .testimonials-container {
+    padding: 9.6rem 3.2rem;
+  }
+}
