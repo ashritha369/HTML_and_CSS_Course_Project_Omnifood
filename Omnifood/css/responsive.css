@@ -1,0 +1,15 @@
+/*****************************/
+/* HERO SECTION */
+/*****************************/
+/*  if you apply two rules that collide to the same elements, it will choose the last one that was declared, unless the first one has the !important marker or is more specific (e.g. html > body vs just body, the latter is less specific). */
+@media (max-width: 600px) {
+  .section-hero {
+    border: 20px dashed blue;
+    background-color: blue;
+  }
+}
+@media (max-width: 1200px) {
+  .section-hero {
+    background-color: orangered;
+  }
+}
