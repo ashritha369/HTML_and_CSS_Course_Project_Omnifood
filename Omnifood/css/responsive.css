@@ -1,15 +1,28 @@
+/* 'rem' and 'em' do not depend on html font-size in media queries, Instead, 1rem=1em=16px */
+
+/* rem=root font-size 
+em=current font size
+*/
+/* we should not use rem in media queries but we should use em in media queries */
 /*****************************/
-/* HERO SECTION */
+/* BELOW 1344px(SMALLER DESKTOPS) */
 /*****************************/
-/*  if you apply two rules that collide to the same elements, it will choose the last one that was declared, unless the first one has the !important marker or is more specific (e.g. html > body vs just body, the latter is less specific). */
-@media (max-width: 600px) {
-  .section-hero {
-    border: 20px dashed blue;
-    background-color: blue;
+
+/* 1st breakpoint found at 1344px */
+
+/* converting 1344px to em */
+
+/* 1344px/16px= 84em*/
+
+@media (max-width: 84em) {
+  .hero {
+    /* below 'rem' has nothing to do with above'em' , it still works same as previous  */
+    max-width: 120rem;
   }
-}
-@media (max-width: 1200px) {
-  .section-hero {
-    background-color: orangered;
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
