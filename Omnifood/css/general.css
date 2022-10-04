@@ -15,6 +15,7 @@
         small: 1.05
         medium:1.2
         paragraph default: 1.6
+        Large: 1.8
 
       --SPACING SYSTEM (px)
       2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
@@ -258,6 +259,7 @@ body {
   align-items: center;
   /* gap in between */
   gap: 1.6rem;
+  line-height: 1.2;
 }
 .list {
   list-style: none;

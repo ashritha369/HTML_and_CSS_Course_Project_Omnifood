@@ -63,3 +63,62 @@ em=current font size
     padding: 9.6rem 3.2rem;
   }
 }
+/* BELOW 944px( TABLETS) */
+/*****************************/
+
+/* 3rd breakpoint found at 944px , here at this point we found that grid alignment  are bit huge to a row*/
+
+/* converting 944px to em */
+
+/* 944px/16px= 59em*/
+
+@media (max-width: 59em) {
+  html {
+    /* we want 8px so (8px divided by 16px-default) multiplied by 100=50% */
+    font-size: 50%;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 0 8rem;
+    gap: 6.4rem;
+  }
+  .hero-img {
+    width: 60%;
+  }
+  .hero-text-box {
+    text-align: center;
+  }
+  .hero-image-box {
+    text-align: center;
+  }
+  .delivered-meals {
+    /* because we have used flex , we use justify-content here */
+    justify-content: center;
+    margin-top: 3.2rem;
+  }
+  .logos img {
+    height: 2.4rem;
+  }
+  .step-number {
+    font-size: 7.4rem;
+  }
+  .meal-content {
+    padding: 2.4rem 3.2rem 3.2rem 3.2rem;
+  }
+  .section-testimonials {
+    grid-template-columns: 1fr;
+  }
+  .gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .cta {
+    /* 3/5= 60% + 2/5=40% */
+    grid-template-columns: 3fr 2fr;
+  }
+  .cta-form {
+    grid-template-columns: 1fr;
+  }
+  .btn--form {
+    margin-top: 1.2rem;
+  }
+}
