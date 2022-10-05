@@ -121,4 +121,65 @@ em=current font size
   .btn--form {
     margin-top: 1.2rem;
   }
+  /* mobile navigation icons-menu icon and close icon */
+  .btn-mobile-nav {
+    /* to display menu icon at this point */
+    display: block;
+  }
+  /* working on main-nav */
+  .main-nav {
+    background-color: blue;
+    /* 1: when we position an element absolutely, we first have to make the parent element relative */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease-in;
+    transform: translateX(100%);
+    width: 100%;
+    /* below height covers the hero section */
+    height: 100vh;
+    /* now we are going to center items */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* ------------------------ */
+    /* By default hide the navigation at this query */
+    /* problem with display : none, is no animation effect(eg: no transition at all) can be seen */
+    /* display: none; */
+    /* ------------------------ */
+
+    /* SO WE USE OPACITY as shown */
+    /* to hide navigation we use followings: */
+    /* 1) Hide it visually */
+    opacity: 0;
+    /* 2)Make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+    /* 3) Hide it from screen-readers */
+    visibility: hidden;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
+  /* nav open class and main-nav class */
+  /* when nav-open exists, main-nav can be applied with below opacity */
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  /* Now at this media query, we will display the close-outline class is present icon , only when nav is open */
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+  /* when nav is open and icon mobile nav's menu-outline should be displayed as none */
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
 }
