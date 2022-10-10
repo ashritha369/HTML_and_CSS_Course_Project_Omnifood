@@ -121,14 +121,16 @@ em=current font size
   .btn--form {
     margin-top: 1.2rem;
   }
+  /* MOBILE NAVIAGTION */
   /* mobile navigation icons-menu icon and close icon */
   .btn-mobile-nav {
     /* to display menu icon at this point */
     display: block;
+    z-index: 1000;
   }
   /* working on main-nav */
   .main-nav {
-    background-color: blue;
+    background-color: #fff;
     /* 1: when we position an element absolutely, we first have to make the parent element relative */
     position: absolute;
     top: 0;
