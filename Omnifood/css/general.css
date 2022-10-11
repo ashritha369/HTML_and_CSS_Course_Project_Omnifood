@@ -77,6 +77,10 @@ html {
   /* Converting to percentage */
   /* 0.625x100= 62.5% */
   overflow-x: hidden;
+
+  /* setting scroll-behavior on html tag and not on body tag */
+  scroll-behavior: smooth;
+  /* Above scroll-behavior:smooth does not work on safari and microsoft edge */
 }
 body {
   font-family: "Rubik", sans-serif;
